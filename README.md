@@ -10,7 +10,7 @@ adicione o script de configuração.
 
 ```javascript
 <script>
-  $('#chat').XChat({
+  $.XChat({
     campaign: 'camapanha',
     product: 'produto',
     host: 'host.xpro.me',
