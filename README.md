@@ -30,3 +30,4 @@ adicione o script de configuração.
 5. **SSL**: (Opcional) Caso a comunicação via websocket seja feita usando ssl;
 6. **Path**: (Opcional) Path do enderaço da API ex: `http://dominiodaapi.com:porta/path`;
 7. **Token** (Obrigatório) Token gerado com base no `Token Origem` e `Token Tipo`;
+8. **CSS** (Opcional) Caminho/pasta do arquivo `xchat.css` ex: `/assets/css`;
