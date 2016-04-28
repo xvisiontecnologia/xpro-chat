@@ -1,4 +1,4 @@
-## Documentação do Chat do Xpro 1.0 (Xchat)
+## Documentação do Chat do Xpro 1.0 (Xchat) - [Download] (https://github.com/xvisiontecnologia/xpro-chat/releases)
 ### Instalação
 Inclua o arquivo `/js/jquery.xchat.min.js` no fim da página, antes de fechar o elemento `</body>`.
 
