@@ -17,7 +17,8 @@ adicione o script de configuração.
     port: '80',
     ssl: 'false',
     path: '/ws',
-    tk: 'token'
+    tk: 'token',
+    css: '/css'
   });
 </script>
 ```
