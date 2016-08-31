@@ -11,14 +11,20 @@
     <script src="js/jquery.xchat.min.js"></script>
     <script>
       $.XChat({
-        campaign: 'camapanha',
+        campaign: 'campanha',
         product: 'produto',
-        host: 'host.xpro.me',
-        port: '80',
-        ssl: 'false',
-        path: '/ws',
-        tk: 'token',
-        css: '/css'
+        host: 'dominio.xpro.me',
+        port: '9001',
+        ssl: false,
+        path: '',
+        css: '',
+        departments: [
+          {
+            name: 'Departamento',
+            token: 'MjAxNjA4M',
+            selected: true
+          }
+        ]
       });
     </script>
   </body>
