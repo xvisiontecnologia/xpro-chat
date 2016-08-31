@@ -11,14 +11,20 @@ adicione o script de configuração.
 ```javascript
 <script>
   $.XChat({
-    campaign: 'camapanha',
+    campaign: 'campanha',
     product: 'produto',
-    host: 'host.xpro.me',
+    host: 'dominio.xpro.me',
     port: '80',
     ssl: 'false',
     path: '/ws',
-    tk: 'token',
-    css: '/css'
+    css: '/css',
+    departments: [
+      {
+        name: 'Departamento',
+        token: 'MjAxNjA4M',
+        selected: true
+      }
+    ]
   });
 </script>
 ```
@@ -30,5 +36,5 @@ adicione o script de configuração.
 4. **Port**: (Opcional) Porta na qual a conexão via websocket será estabelecida;
 5. **SSL**: (Opcional) Caso a comunicação via websocket seja feita usando ssl;
 6. **Path**: (Opcional) Path do enderaço da API ex: `http://dominiodaapi.com:porta/path`;
-7. **Token** (Obrigatório) Token gerado com base no `Token Origem` e `Token Tipo`;
+7. **Departments** (Obrigatório) Array com os departamentos disponíveis no chat. O token final é formado pelo `id do projeto`, `Token Origem` e `Token Tipo`;
 8. **CSS** (Opcional) Caminho/pasta do arquivo `xchat.css` ex: `/assets/css`;
