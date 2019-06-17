@@ -1,31 +1,69 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>XChat</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  </head>
-  <body>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body style="width:100%;height:100%;padding: 0px;margin: 0px;">
+    <div class="watts-icon" id="chat"><span class="pulse"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAtCAYAAAAHiIP8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMzU1OUY3ODZFQjAxMUU5OEY0RkZGMzdDMUJDQTc5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMzU1OUY3OTZFQjAxMUU5OEY0RkZGMzdDMUJDQTc5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkY2QkNDQ0ZGNkU5RDExRTk4RjRGRkYzN0MxQkNBNzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY2QkNDRDAwNkU5RDExRTk4RjRGRkYzN0MxQkNBNzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+6aAGAQAABnBJREFUeNrMmgts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"
+                alt=""></span></div>
+    <!-- <div id="Xchat"></div> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/jquery.xchat.min.js"></script>
-    <script>
-      $.XChat({
-        campaign: 'campanha',
-        product: 'produto',
-        host: 'dominio.xpro.me',
-        port: '9001',
-        ssl: false,
-        path: '',
-        css: '',
-        departments: [
-          {
-            name: 'Departamento',
-            token: 'MjAxNjA4M',
-            selected: true
-          }
-        ]
-      });
+
+    <script type='text/javascript' src='jquery.xchat.min.js'></script>
+    <script type="text/javascript">
+        $.XChat({
+            campaign: 'campanha',
+            product: 'produto',
+            host: 'dominio.xpro.me',
+            port: '9001',
+            ssl: false,
+            path: '',
+            css: '',
+            departments: [
+                {
+                    name: 'Departamento',
+                    token: 'MjAxNjA4M',
+                    selected: true
+                }
+            ]
+        });
+
+        $(document).ready(function () {
+            $("#chat").click(function () {
+                if (!$('.XChat').hasClass('talking'))
+                    $('#xchat-btn-status').click();
+
+                if ($('.XChat').css('max-width') == '425px') {
+                    $('.XChat').css('max-width', '0px');
+                    $('.pulse').css('background-color', 'white');
+                    $('.pulse').css('animation', 'pulse 2s infinite');
+                } else {
+                    $('.XChat').css('max-width', '425px');
+                    $('.pulse').css('background-color', '#dedede');
+                    $('.pulse').css('animation', 'none');
+                }
+            });
+            setTimeout(function () {
+                if (!$('#xchat-btn-status').hasClass('online')) {
+                    $('#xchat-btn-status').text('Consultor Offline');
+                    $('#xchat-btn-status').click(function () {
+                        $('#offline-chat').modal('show');
+                    });
+                }
+            }, 2000);
+        });
     </script>
-  </body>
+
+</body>
+
 </html>
