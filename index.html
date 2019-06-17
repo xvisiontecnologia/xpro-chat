@@ -22,23 +22,25 @@
     <script type='text/javascript' src='jquery.xchat.min.js'></script>
     <script type="text/javascript">
         $.XChat({
-            campaign: 'Padrão',
-            product: 'Padrão',
-            host: 'sac.xpro.me',
-            // port: '',
-            ssl: true,
-            path: '/ws',
+            campaign: 'campanha',
+            product: 'produto',
+            host: 'dominio.xpro.me',
+            port: '9001',
+            ssl: false,
+            path: '',
+            css: '',
             departments: [
                 {
-                    name: 'Xvision Tecnologia',
-                    token: 'MjAxOTA1MjgxMDM1MDIzOTgzMTQyOWI4MWRjZjFmMWFiN2UzNGRmYTM2ODgwZHwxfDM4MjhlYTM5ZjdlZjA5Y2Q0YTZiODgwZDFlZTI2YTZkfDIy',
-                },
+                    name: 'Departamento',
+                    token: 'MjAxNjA4M',
+                    selected: true
+                }
             ]
         });
 
         $(document).ready(function () {
             $("#chat").click(function () {
-                if(!$('.XChat').hasClass('talking'))
+                if (!$('.XChat').hasClass('talking'))
                     $('#xchat-btn-status').click();
 
                 if ($('.XChat').css('max-width') == '425px') {
