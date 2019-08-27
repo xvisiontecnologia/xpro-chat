@@ -53,14 +53,6 @@
                     $('.pulse').css('animation', 'none');
                 }
             });
-            setTimeout(function () {
-                if (!$('#xchat-btn-status').hasClass('online')) {
-                    $('#xchat-btn-status').text('Consultor Offline');
-                    $('#xchat-btn-status').click(function () {
-                        $('#offline-chat').modal('show');
-                    });
-                }
-            }, 2000);
         });
     </script>
 
