@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     function newChat (name, email, phone, token) {
 
-        $.get('http://'+workspace+'/gestaodeleads/newchat?name='+name+'&email='+email+'&phone='+phone+'&token='+token).done(function(data){
+        $.get('http://'+workspace+'/gestaodeleads/newchat?text=Chat iniciado&name='+name+'&email='+email+'&phone='+phone+'&token='+token).done(function(data){
             if(data){
                 try{
                     data = JSON.parse(data);
