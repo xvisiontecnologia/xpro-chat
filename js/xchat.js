@@ -1,11 +1,11 @@
-var workspace = "base.xpro.me";
-    var tokens = [
-        {
-            name: 'Xvision',
-            token: 'MjAxOTEwMTUxNzEzMjBkMWNhMzE3MWI2ZmZkY2I0ZTg3OGQwNmNhZGYzNDZmOHwxfDdmMDdjNDQzYWViYzhjMmZiMDdlZTEwMjVmZTE2NTE3fDQy',
-            selected: true
-        }
-    ];
+var workspace = "testebot.xpro.me";
+var tokens = [
+    {
+        name: 'Chatbot Teste',
+        token: 'MjAxOTEwMDExMDAzNTU3NWYwNzVmNTFiNTVmZjRhNDM4ZjVkMDJjODZhMTNkNnwxfGE5Yjg2MWM1Yjc5ZGZiZDQ2NGFiNGRlMDk2YjQzZDJhfDQw',
+        selected: true
+    }
+];
     
 $(document).ready(function () {
     $('body').append($('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>'));
@@ -48,7 +48,7 @@ $(document).ready(function () {
     function loadMessages () {
         !xChat.find(".chat-window-content > div").length && loading();
         
-        $.get('http://'+workspace+'/gestaodeleads/loadmessages?token='+$.cookie('xChatTk')).done(function(data){
+        $.get('https://'+workspace+'/gestaodeleads/loadmessages?token='+$.cookie('xChatTk')).done(function(data){
             if(data){
                 try{
                     data = JSON.parse(data);
@@ -67,7 +67,7 @@ $(document).ready(function () {
     }
 
     function sendMessage (text) {
-        $.get('http://'+workspace+'/gestaodeleads/sendmessage?token='+$.cookie('xChatTk')+'&text='+text).done(function(data){
+        $.get('https://'+workspace+'/gestaodeleads/sendmessage?token='+$.cookie('xChatTk')+'&text='+text).done(function(data){
             if(data){
                 addMessage(text, 'client');
             }
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     function newChat (name, email, phone, token) {
 
-        $.get('http://'+workspace+'/gestaodeleads/newchat?text=Chat iniciado&name='+name+'&email='+email+'&phone='+phone+'&token='+token).done(function(data){
+        $.get('https://'+workspace+'/gestaodeleads/newchat?text=Chat iniciado&name='+name+'&email='+email+'&phone='+phone+'&token='+token).done(function(data){
             if(data){
                 try{
                     data = JSON.parse(data);
@@ -197,9 +197,7 @@ $(document).ready(function () {
         }).append($("<button>", {
             id: "chat-send",
             type: "button"
-        }).text("enviar"))).addClass("min").prependTo(xChat), xChat.find("#xchat-window").fadeIn(1e3, function() {
-            $(this).removeClass("min")
-        })) xChat.addClass("talking");
+        }).text("enviar"))).addClass("min").prependTo(xChat), xChat.find("#xchat-window").removeClass("min")) xChat.addClass("talking");
         
         xChat.find(".chat-window-header .name").click(function() {
             xChat.hasClass("talking") || xChat.hasClass("with-tokens") ? xChat.find(".chat-window").toggleClass("min") : (xChat.find(".chat-window").remove(), xChat.removeClass("talking").removeClass("with-tokens"), xChat.find("#xchat-btn-status").removeAttr("style"))
@@ -248,7 +246,7 @@ $(document).ready(function () {
 
         xChat.find(".chat-window-content").animate({
             scrollTop: xChat.find(".chat-window-content")[0].scrollHeight
-        }, 300)
+        }, 0)
         
     }
 
