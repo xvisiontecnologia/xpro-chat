@@ -32,8 +32,7 @@
 .XChat button,
 .XChat button:focus,
 .XChat button:hover {
-    background-image: linear-gradient(to right, #EC0928, #90192a);
-    ;
+    background-image: linear-gradient(to right, #4c4694, #22bfd5);
     border: none;
     cursor: pointer;
     color: #fff;
@@ -102,7 +101,8 @@
     background-color: #f56d6d;
     color: #fff;
     font-size: 12px;
-    padding: 10px
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .XChat .select {
@@ -305,8 +305,7 @@
 }
 
 .XChat .chat-window-header {
-    background-image: linear-gradient(to right, #EC0928, #90192a);
-    ;
+    background-image: linear-gradient(to right, #4c4694, #22bfd5);
     color: #fff;
     cursor: pointer;
     height: 40px;
@@ -397,7 +396,7 @@
 }
 
 .XChat .chat-window-content .message.admin {
-    background-color: #d86372;
+    background-color: #00a9e1;
     color: #fff;
     display: block;
     word-break: break-word !important;
@@ -406,7 +405,7 @@
 
 .XChat .chat-window-content .message.admin:after {
     border-top-color: transparent;
-    border-bottom-color: #d86372;
+    border-bottom-color: #00a9e1;
     top: -13px;
     left: 5px
 }
@@ -560,7 +559,7 @@
     border-bottom-style: solid;
     border-width: 1px;
     border-color: #00a8e3;
-    background-color: #fff1f3;
+    background-color: #f1fff7;
     transition: 0.2s;
     border-radius: 10px;
 }
@@ -634,3 +633,23 @@
   .zero{
       width: 0px !important;
   }
+  @media screen and (max-width: 425px) {
+    .pulse {
+        display: flex;
+        width: 55px;
+        font-size: 40px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        animation: pulse 2s infinite;
+        transition: 0.2s;
+        padding-top: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .pulse img {
+        width: 35px;
+    }
+}
